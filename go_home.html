@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  	<title>日野台高等学校帰宅部公式ホームページ</title>
+  <meta charset="UTF-8">
+  <style>
+ h1 {
+  background-color: #e6e6fa;
+}
+</style>
+</head>
+<body>
+  <h1>日野台高校帰宅部ホームページ</h1>
+  <p>あなたも帰宅部に入りましょう！まずは何分で帰宅できるか調べてみましょう</p>
+  <a href="https://www.bing.com/maps?q=%E6%97%A5%E9%87%8E%E5%8F%B0%E9%AB%98%E6%A0%A1&FORM=HDRSC6&cp=35.672742%7E139.38642&lvl=16.0">こちらからチェック</a>
+  <p>今調べた時間またはいつも帰宅している時間よりももっと早く帰宅したくありませんか？帰宅部に入れば平均5～10分は早く帰れるようになります！帰宅に興味のある方、今まであまり帰宅したことがない人も大歓迎です！</p>
+  <img src="https://th.bing.com/th/id/R.e49129922c90f08b199fe566c9028920?rik=Sxw%2bIe3bP8SlpQ&riu=http%3a%2f%2fwww.kyoiku.metro.tokyo.jp%2fstatic%2fhigh_school%2fimages_school%2f154_hinodai-h_1.jpg&ehk=m9TzHo7sNDce2lxkupMUpA1zfFu%2fd%2bNv8tG4rnJwOi8%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1">
+  <p>活動場所は通学路で活動日は月曜日～金曜日(土曜日)オフの日でも自主練をやっています。ぜひ仮入部に来てください。
+  </p>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdISPY6w1I3krdGC6hFy1E2QWVbc9JGq4eeh6hauVz24FSTmQ/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
+<p><input name="entry.1409274491" placeholder="名前" value="名無し" required></p>
+<p><input name="entry.679536727" placeholder="メールアドレス" type="email"></p>
+<p><textarea name="entry.2100608891" placeholder="コメント" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
+<input type="submit" id="submitbutton" value="送信">
+</form>
+<iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
+
+<script type="text/javascript">
+var NGComments = ["死ね","バカ",".exe"]; // 簡易的なNGワードの設定
+var regex = new RegExp(NGComments.join("|"));
+function test(wcheck) {
+	if (wcheck.match(regex) != null) {
+		alert("ERROR: コメントにNGワードが含まれています");
+		return false;
+	}
+	document.getElementById("submitbutton").disabled = true;
+	textareas = document.getElementsByTagName('textarea');
+	for(var i=0 ;i < textareas.length ;i ++ ){
+		textareas[i].value = textareas[i].value.replace( /</g ,'&lt;' );
+	}
+	inputs = document.getElementsByTagName('input');
+	for(var i=0 ;i < inputs.length ;i ++ ){
+		inputs[i].value = inputs[i].value.replace( /</g ,'&lt;' );
+	}
+	return submitted=!0;
+}
+</script>
+</body>
+</html>
